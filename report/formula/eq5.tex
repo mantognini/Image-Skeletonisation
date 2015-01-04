@@ -1,0 +1,42 @@
+\documentclass{standalone}
+%\documentclass[preview]{standalone}
+%\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+% comments are for the second version
+
+\begin{equation*}
+\begin{aligned}
+Speedup_{\text{CUDA,tree.png}}&= \frac
+	{ 21595 \text{ ms} }
+	{ 
+		\frac{1961 \text { KB}}{1.6 \text{ GB/s}} + 
+		\frac{1961 \text { KB}}{31.5 \text{ GB/s}} +
+		2 \times 126 \times \left(
+			\frac{2.88}{256} \times 85.69 \text{ ms}+
+			\frac{1961 \text { KB}}{31.5 \text{ GB/s}} 
+		\right) + 
+		\frac{1961 \text { KB}}{ \text{6.2 GB/s}}
+	} \\
+&= \frac
+	{ 21595 \text{ ms} }
+	{
+		1.20 \text{ ms} +
+		0.06 \text{ ms} +
+	 	252 \times \left(
+			0.97 \text{ ms} +
+			0.06 \text{ ms}
+		\right) +
+		0.30 \text{ ms}
+	} \\
+&= \frac
+	{ 21595 \text{ ms} }
+	{ 260 \text{ ms} }
+	\approx 83
+	% WITH I/O, ~7X, t_read = 450, t_write = 2551
+\end{aligned}
+\end{equation*}
+
+\end{document}

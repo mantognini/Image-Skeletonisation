@@ -1,0 +1,29 @@
+\documentclass{standalone}
+%\documentclass[preview]{standalone}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{equation*}
+\begin{aligned}
+%& PCIe_s \leq 8 GB/s \\
+&H \rightarrow D_s \leq
+	\begin{cases}
+    		1.6 \text{ GB/s} & \text{\: for 2 MB} \\
+	   	1.6 \text{ GB/s} & \text{\: for 15 MB}
+  	\end{cases} \\
+&D \rightarrow H_s \leq
+	\begin{cases}
+    		6.2 \text{ GB/s} & \text{\: for 2 MB} \\
+	   	6.2 \text{ GB/s} & \text{\: for 15 MB}
+  	\end{cases} \\
+&D \rightarrow D_s \leq
+	\begin{cases}
+    		31.5 \text{ GB/s} & \text{for 2 MB} \\
+	   	37.9 \text{ GB/s} & \text{for 15 MB}
+  	\end{cases} \\
+&\lambda = \frac{2600 \text{ MHz}}{900 \text{ MHz}} = 2.88
+\end{aligned}
+\end{equation*}
+
+\end{document}

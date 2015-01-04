@@ -1,0 +1,7 @@
+bin
+build
+resources/skel
+*.log
+*.aux
+*.toc
+*.synctex.gz

@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{equation*}
+\begin{aligned}
+X_H(p) &= \sum_{i=1}^4 b_i, \quad b_i = 
+	\begin{cases}
+		1 & \text{if } x_{2i-1} = 0 \text{ and } \left( x_{2i} = 1 \text{ or } x_{2i+1} = 1 \right ) \\
+		0 & \text{otherwise}
+	\end{cases} \\
+n_1(p) &= \sum_{i=1}^4 x_{2i-1} \vee x_{2i} \\
+n_2(p) &= \sum_{i=1}^4 x_{2i} \vee x_{2i+1}
+\end{aligned}
+\end{equation*}
+
+\end{document}
+

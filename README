@@ -1,0 +1,51 @@
+Image Skeletonisation
+=====================
+
+A performance comparison with Thrust
+
+
+Description
+-----------
+
+This project was realised during the fall semester 2014 at EPFL for CS-425,
+Program parallelisation on PC clusters.
+
+It aims to compare a theoretical analysis of the parallelisation of the image
+skeletonisation problem against an actual implementation in C++ using Thrust,
+a high level algorithm library with CUDA, TBB and OpenMP backends. The goal is
+to compare the speedup of the parallel implementation and highlight the effect
+of some hardware properties on the scalability of the performances.
+
+The full report is available in `Image Skeletonisation - report.pdf`.
+
+
+Build Instructions
+------------------
+
+To run all implementations and measure running time, use `make run`. You will
+need the software described in the `Hardware & Software Specifications` section
+of the report.
+
+Binaries of the required boost, SFML and libjpeg dependencies for Mac OS X are
+provided for convenience. If you are not using this operating system or the same
+compilers, you will need to build those yourself and potentially edit the
+`Makefile`.
+
+Adding `-DENABLE_SAVE_IMAGE` to the compilation flags will enable saving the
+skeletonised image and include I/O times in the running time measurement.
+
+Similarly, `-DENABLE_PARALLEL_SHORT_CIRCUIT_WHITE` enable some optimisations
+in the parallel implementation. Note that on CUDA this might decrease the
+speedup due to thread divergence.
+
+
+License
+-------
+
+The source code included in this project is distributed under the zlib/png
+license. Please refer to LICENSE for the full text.
+
+The boost library is distributed under Boost Software License, which is
+available in lib/BOOST_LICENSE. The SFML library is distributed under
+zlib/png license, which is available in lib/SFML_LICENSE. License for libjpeg is
+available in lib/LIBJPEG_LICENSE.
